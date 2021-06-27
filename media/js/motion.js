@@ -17,7 +17,7 @@ var MotionExector = {
     this.next();
   }, 
   clear: function() {
-    jQuery.Velocity('stop');
+    window.Velocity('stop');
     this.queue = [];
     this.index - 1;
   }
@@ -62,7 +62,7 @@ let logoLineMotion = function(MotionExector) {
         }
       }
     })
-    jQuery.Velocity.RunSequence(sequence);
+    window.Velocity.RunSequence(sequence);
   } else{
     MotionExector.next();
   }
@@ -112,13 +112,13 @@ let titleMotion = function(MotionExector) {
       }
     })
   }
-  jQuery.Velocity.RunSequence(sequence);
+  window.Velocity.RunSequence(sequence);
 }
 
 let menuMotion = function(MotionExector) {
   let menus = document.querySelectorAll(Element_Class.navItem);
 
-  menus && jQuery.Velocity(menus, 'transition.slideDownIn', {
+  menus && window.Velocity(menus, 'transition.slideDownIn', {
     display: null,
     duration: 200,
     complete: function () {
@@ -133,15 +133,15 @@ let postListMotion = function(MotionExector) {
   || document.querySelector('.gemini .sidebar');
 
   if (geminiSiteMeta) {
-    jQuery.Velocity(posts, 'transition.slideDownIn', { })
+    window.Velocity(posts, 'transition.slideDownIn', { })
   } else {
-    jQuery.Velocity(posts, 'transition.slideDownIn', { 
+    window.Velocity(posts, 'transition.slideDownIn', { 
       complete: function() {
         MotionExector.next();
       }
     })
   }
-  geminiSiteMeta && jQuery.Velocity(geminiSiteMeta,'transition.slideUpIn',{
+  geminiSiteMeta && window.Velocity(geminiSiteMeta,'transition.slideUpIn',{
     stagger: 100, 
     drag: true,
     complete: function() {
@@ -158,7 +158,7 @@ let tagPostMotion = function(MotionExector) {
   let tagNodes = document.querySelectorAll(Element_Class.tagPostNode);
 
   if (tagNodes.length > 0) {
-    jQuery.Velocity(tagNodes ,'transition.slideDownIn', {
+    window.Velocity(tagNodes ,'transition.slideDownIn', {
       stagger: 100,
       drag: true,
       complete: function() {
@@ -204,7 +204,7 @@ window.addEventListener('load', function() {
     });
   }
   if (sequence.length > 0) {
-    jQuery.Velocity.RunSequence(sequence);
+    window.Velocity.RunSequence(sequence);
   }
   // 标签页入场动画
   let cloudTags = document.querySelectorAll(Element_Class.cloudTags)
@@ -214,6 +214,6 @@ window.addEventListener('load', function() {
       e: cloudTags,
       p: 'transition.expandIn'
     });
-    jQuery.Velocity.RunSequence(sequence);
+    window.Velocity.RunSequence(sequence);
   }
 })
