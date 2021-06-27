@@ -9,7 +9,7 @@
 <meta name="description" content="飘啊飘~">
 <meta name="theme-color" content="#000">
 <title>星系 49-U6U</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/favicon.ico?v=1624807192972">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/favicon.ico?v=1624810475088">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/fonts/font-awesome.css">
 <link
@@ -50,7 +50,6 @@
 
 
 
-
 </head>
 
 <body>
@@ -84,6 +83,8 @@
           
             
             
+              
+            
             <li class="nav-item nav-item-active">
               
               
@@ -94,6 +95,8 @@
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -106,6 +109,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -117,6 +122,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -126,6 +133,16 @@
               
             </li>
           
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
           
           
             <li id="fa_search" class="nav-item">
@@ -206,8 +223,6 @@
       </div>
     
   
-  
-
   
 
 
@@ -329,13 +344,13 @@
     </div>
     <div class="footer-box">
   <footer class="footer">
-    <span id="busuanzi_container_site_pv">浏览数 <span id="busuanzi_value_site_pv"></span> 次</span>
-    <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span> 人</span>
     <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> ©2019 | Theme By <a
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
         href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
     </div>
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
     <div class="poweredby">
       Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
     </div>
@@ -401,9 +416,9 @@
 
 
   let hasCacu = false;
-  window.addEventListener('resize', function (e) {
+  window.onresize = function () {
     calcuHeight();
-  });
+  }
 
   function calcuHeight() {
     // 动态调整站点概览高度
@@ -501,7 +516,6 @@
   
   // 离开当前页title变化
   var leaveTitle = "";
-  var normal_title = document.title;
   if (leaveTitle) {
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState == 'hidden') {
@@ -520,6 +534,7 @@
 
 <script>
   let images = document.querySelectorAll('.section img');
+  console.log(images);
   images.forEach(image => {
     var parent = image.parentElement;
     var next = image.nextElementSibling;
@@ -533,7 +548,6 @@
     parent.insertBefore(aelem, next);
   })
 </script>
-
   </div>
 </body>
 

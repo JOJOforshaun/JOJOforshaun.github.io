@@ -9,7 +9,7 @@
 <meta name="description" content="飘啊飘~">
 <meta name="theme-color" content="#000">
 <title>HCIA-云计算 云计算简介 | 星系 49-U6U</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/favicon.ico?v=1624807192972">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/favicon.ico?v=1624810475088">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/fonts/font-awesome.css">
 <link
@@ -50,7 +50,6 @@
 
 
 
-
   <meta name="description" content="HCIA-云计算 云计算简介" />
   <meta name="keywords" content="HCIA,云计算,学习" />
 </head>
@@ -86,6 +85,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -96,6 +97,8 @@
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -108,6 +111,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -119,6 +124,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -128,6 +135,16 @@
               
             </li>
           
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
           
           
             <li id="fa_search" class="nav-item">
@@ -417,12 +434,12 @@
     currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
     e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
 
-    jQuery.Velocity(hideElement, 'stop');
-    jQuery.Velocity(hideElement, 'transition.slideUpOut', {
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
       display: 'none',
       duration: 200,
       complete: function () {
-        jQuery.Velocity(showElement, 'transition.slideDownIn', {
+        window.Velocity(showElement, 'transition.slideDownIn', {
           duration: 200
         });
       }
@@ -625,13 +642,13 @@ Part 的 Instruction；<br>
     </div>
     <div class="footer-box">
   <footer class="footer">
-    <span id="busuanzi_container_site_pv">浏览数 <span id="busuanzi_value_site_pv"></span> 次</span>
-    <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span> 人</span>
     <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> ©2019 | Theme By <a
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
         href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
     </div>
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
     <div class="poweredby">
       Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
     </div>
@@ -697,9 +714,9 @@ Part 的 Instruction；<br>
 
 
   let hasCacu = false;
-  window.addEventListener('resize', function (e) {
+  window.onresize = function () {
     calcuHeight();
-  });
+  }
 
   function calcuHeight() {
     // 动态调整站点概览高度
@@ -797,7 +814,6 @@ Part 的 Instruction；<br>
   
   // 离开当前页title变化
   var leaveTitle = "";
-  var normal_title = document.title;
   if (leaveTitle) {
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState == 'hidden') {
@@ -816,6 +832,7 @@ Part 的 Instruction；<br>
 
 <script>
   let images = document.querySelectorAll('.section img');
+  console.log(images);
   images.forEach(image => {
     var parent = image.parentElement;
     var next = image.nextElementSibling;
@@ -829,7 +846,6 @@ Part 的 Instruction；<br>
     parent.insertBefore(aelem, next);
   })
 </script>
-
     <div class="reward-mask" style="display: none;">
   <div class="reward-relative">
     <span class="close" aria-hidden="true">x</span>
@@ -1012,20 +1028,20 @@ Part 的 Instruction；<br>
 
     if (zfbBtn && wxBtn) {
       zfbBtn.addEventListener('click', () => {
-        jQuery.Velocity(zfb, 'transition.slideLeftIn', {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
           duration: 400
         });
-        jQuery.Velocity(wx, 'transition.slideRightOut', {
+        window.Velocity(wx, 'transition.slideRightOut', {
           display: 'none',
           duration: 400
         });
       });
 
       wxBtn.addEventListener('click', () => {
-        jQuery.Velocity(wx, 'transition.slideRightIn', {
+        window.Velocity(wx, 'transition.slideRightIn', {
           duration: 400
         });
-        jQuery.Velocity(zfb, 'transition.slideLeftOut', {
+        window.Velocity(zfb, 'transition.slideLeftOut', {
           display: 'none',
           duration: 400
         });
@@ -1033,14 +1049,14 @@ Part 的 Instruction；<br>
     }
 
     rewardBtn.addEventListener('click', (e) => {
-      jQuery.Velocity(mask, 'transition.slideDownIn', {
+      window.Velocity(mask, 'transition.slideDownIn', {
         duration: 400
       })
     });
 
     close.addEventListener('click', (e) => {
       e.preventDefault();
-      jQuery.Velocity(mask, 'transition.slideUpOut', {
+      window.Velocity(mask, 'transition.slideUpOut', {
         duration: 400
       })
     })

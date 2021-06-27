@@ -224,7 +224,6 @@ p > code {
 }
 .header-box {
   position: relative;
-  margin-bottom: 1px;
 }
 .main-container {
   position: relative;
@@ -371,14 +370,15 @@ p > code {
 }
 .footer-box {
   position: relative;
-  padding: 15px 0;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .footer {
+  margin-top: 100px;
   min-height: 50px;
   text-align: center;
   font-size: 14px;
   color: #999;
+  margin: 20px;
 }
 .footer a {
   color: #555;
@@ -422,9 +422,6 @@ p > code {
   bottom: 30px;
 }
 @media (max-width: 767px) {
-  .footer-box {
-    margin-top: 0px;
-  }
   .back-to-top {
     right: 10px;
   }
@@ -515,16 +512,9 @@ p > code {
 .friends-note a:hover {
   color: #13d491;
 }
-@media (max-width: 767px) {
-  .section-box,
-  section {
-    min-height: auto !important;
-  }
-}
 .page {
   border-top: 1px solid #eee;
   background-color: #fff;
-  opacity: 0;
 }
 .page a {
   border: none;
@@ -1225,7 +1215,7 @@ p > code {
   font-weight: normal;
 }
 .result {
-  overflow-y: auto;
+  overflow: scroll;
   padding: 10px 30px;
   flex: 1;
 }
