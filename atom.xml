@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jojoforshaun.github.io/</id>
     <title>1024只羊的破站</title>
-    <updated>2021-06-27T08:45:41.812Z</updated>
+    <updated>2021-06-27T08:51:08.709Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jojoforshaun.github.io/"/>
     <link rel="self" href="https://jojoforshaun.github.io/atom.xml"/>
@@ -34,14 +34,10 @@
 1.一个“problem”被划分成一串离散的“Instructions”；<br>
 2.“Instructions”会被一个一个的在单个 CPU 上执行；<br>
 3 .CPU 在在同一时间只能处理一个“Instruction”<br>
-　　一个 Problem 只采用串行计算的话，如果 Problem 太复杂，处理的时间会较长。如果解决<br>
-更大规模的问题，尤其是计算机的内存受到限制的时候，用单个 CPU 来解决是不切实际或者根<br>
-本不可能的，例如，网络搜索引擎和网络数据库每秒要处理上百万次的处理，用串行计算基本不<br>
-大可能。<br>
+　　一个 Problem 只采用串行计算的话，如果 Problem 太复杂，处理的时间会较长。如果解决更大规模的问题，尤其是计算机的内存受到限制的时候，用单个 CPU 来解决是不切实际或者根本不可能的，如，网络搜索引擎和网络数据库每秒要处理上百万次的处理，用串行计算基本不大可能。<br>
 <img src="https://jojoforshaun.github.io//post-images/1624782545629.png" alt="" loading="lazy"></p>
 <h3 id="并行计算">并行计算</h3>
-<p>难以提高单个 CPU 的计算性能，那么我们就让多个 CPU 同时参与到任务的执行中，也<br>
-就是在最简单的情形下，使用并行计算来解决串行计算的限制：<br>
+<p>难以提高单个 CPU 的计算性能，那么我们就让多个 CPU 同时参与到任务的执行中，也就是在最简单的情形下，使用并行计算来解决串行计算的限制：<br>
 <img src="https://jojoforshaun.github.io//post-images/1624782786462.png" alt="" loading="lazy"><br>
 1.先把一个大的 Problem 分解成多个可被同时解决的 Part；<br>
 2.再把每个 Part 划分成一串离散的 Instructions；<br>
@@ -54,46 +50,8 @@ Part 的 Instruction；<br>
 3.可以把程序放在最适合运行它的计算机上。其中，共享稀有资源和平衡负载是计算机分<br>
 布式计算的核心思想之一。<br>
 <img src="https://jojoforshaun.github.io//post-images/1624783237275.png" alt="" loading="lazy"><br>
-　　并行计算与分布式计算都是通过运用并行来获得更高性能，化大任务为小任务。简单说来，<br>
-如果处理单元共享内存，就称为并行计算，反之就是分布式计算。也有人认为分布式计算是并行<br>
-计算的一种特例。<br>
-　　其实分布式的任务包互相之间有独立性，上一个任务包的结果未返回或者是结果处理错误，<br>
-对下一个任务包的处理几乎没有什么影响。因此，分布式的实时性要求不高，而且允许存在计算<br>
-错误（因为每个计算任务给好几个参与者计算，上传结果到服务器后要比较结果，然后对结果差<br>
-异大的进行验证）。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://jojoforshaun.github.io/post/hello-gridea/</id>
-        <link href="https://jojoforshaun.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
-<p>TEst</p>
+　　并行计算与分布式计算都是通过运用并行来获得更高性能，化大任务为小任务。简单说来，如果处理单元共享内存，就称为并行计算，反之就是分布式计算。也有人认为分布式计算是并行计算的一种特例。<br>
+　　其实分布式的任务包互相之间有独立性，上一个任务包的结果未返回或者是结果处理错误，对下一个任务包的处理几乎没有什么影响。因此，分布式的实时性要求不高，而且允许存在计算错误（因为每个计算任务给好几个参与者计算，上传结果到服务器后要比较结果，然后对结果差异大的进行验证）。</p>
 ]]></content>
     </entry>
 </feed>
