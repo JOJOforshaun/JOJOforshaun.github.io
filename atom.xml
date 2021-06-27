@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jojoforshaun.github.io/</id>
-    <title>1024只羊的破站</title>
-    <updated>2021-06-27T08:51:08.709Z</updated>
+    <title>伊什塔级重型突击巡洋舰</title>
+    <updated>2021-06-27T08:54:58.864Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jojoforshaun.github.io/"/>
     <link rel="self" href="https://jojoforshaun.github.io/atom.xml"/>
-    <subtitle>到底有多少只羊……</subtitle>
+    <subtitle>飘啊飘~</subtitle>
     <logo>https://jojoforshaun.github.io/images/avatar.png</logo>
     <icon>https://jojoforshaun.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, 1024只羊的破站</rights>
+    <rights>All rights reserved 2021, 伊什塔级重型突击巡洋舰</rights>
     <entry>
         <title type="html"><![CDATA[HCIA-云计算 云计算简介]]></title>
         <id>https://jojoforshaun.github.io/post/hcia-yun-ji-suan-yun-ji-suan-jian-jie/</id>
@@ -30,12 +30,12 @@
 5.可计量服务</p>
 <h2 id="计算发展史">计算发展史</h2>
 <h3 id="串行计算">串行计算</h3>
-<p>传统上，一般的软件设计都是串行式计算，具体如下：<br>
+<p><img src="https://jojoforshaun.github.io//post-images/1624782545629.png" alt="" loading="lazy"><br>
+传统上，一般的软件设计都是串行式计算，具体如下：<br>
 1.一个“problem”被划分成一串离散的“Instructions”；<br>
 2.“Instructions”会被一个一个的在单个 CPU 上执行；<br>
 3 .CPU 在在同一时间只能处理一个“Instruction”<br>
-　　一个 Problem 只采用串行计算的话，如果 Problem 太复杂，处理的时间会较长。如果解决更大规模的问题，尤其是计算机的内存受到限制的时候，用单个 CPU 来解决是不切实际或者根本不可能的，如，网络搜索引擎和网络数据库每秒要处理上百万次的处理，用串行计算基本不大可能。<br>
-<img src="https://jojoforshaun.github.io//post-images/1624782545629.png" alt="" loading="lazy"></p>
+　　一个 Problem 只采用串行计算的话，如果 Problem 太复杂，处理的时间会较长。如果解决更大规模的问题，尤其是计算机的内存受到限制的时候，用单个 CPU 来解决是不切实际或者根本不可能的，如，网络搜索引擎和网络数据库每秒要处理上百万次的处理，用串行计算基本不大可能。</p>
 <h3 id="并行计算">并行计算</h3>
 <p>难以提高单个 CPU 的计算性能，那么我们就让多个 CPU 同时参与到任务的执行中，也就是在最简单的情形下，使用并行计算来解决串行计算的限制：<br>
 <img src="https://jojoforshaun.github.io//post-images/1624782786462.png" alt="" loading="lazy"><br>
