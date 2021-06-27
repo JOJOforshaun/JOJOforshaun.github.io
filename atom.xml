@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://jojoforshaun.github.io/</id>
+    <title>星系 49-U6U</title>
+    <updated>2021-06-27T15:15:05.797Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://jojoforshaun.github.io/"/>
+    <link rel="self" href="https://jojoforshaun.github.io/atom.xml"/>
+    <subtitle>飘啊飘~</subtitle>
+    <logo>https://jojoforshaun.github.io/images/avatar.png</logo>
+    <icon>https://jojoforshaun.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, 星系 49-U6U</rights>
+    <entry>
+        <title type="html"><![CDATA[HCIA-云计算 云计算简介]]></title>
+        <id>https://jojoforshaun.github.io/post/hcia-yun-ji-suan-yun-ji-suan-jian-jie/</id>
+        <link href="https://jojoforshaun.github.io/post/hcia-yun-ji-suan-yun-ji-suan-jian-jie/">
+        </link>
+        <updated>2021-06-27T08:10:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>通俗的讲，<strong>云</strong>，是网络、互联网的一种比喻说法，即互联网与建立互联网所需要的底层基础设施的抽象体。“<strong>计算</strong>”指的是一台足够强大的计算机提供的<em>计算服务</em>（包括各种功能，资源，存储）。“<strong>云计算</strong>”可以理解为：通过互联网可以使用足够强大的计算机为用户提供的服务，这种服务的使用量可以使用统一的单位来描述。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>通俗的讲，<strong>云</strong>，是网络、互联网的一种比喻说法，即互联网与建立互联网所需要的底层基础设施的抽象体。“<strong>计算</strong>”指的是一台足够强大的计算机提供的<em>计算服务</em>（包括各种功能，资源，存储）。“<strong>云计算</strong>”可以理解为：通过互联网可以使用足够强大的计算机为用户提供的服务，这种服务的使用量可以使用统一的单位来描述。</p>
+<!-- more -->
+<h2 id="云计算的定义">云计算的定义</h2>
+<p>美国国家标准与技术研究院（NIST）定义：</p>
+<blockquote>
+<p>云计算是一种模型，它可以实现随时随地、便捷地、随需应变地从可配置计算资源共享池中获取所需的资源（例如，网络、服务器、存储、应用、及服务），资源能够快速供应并释放，使管理资源的工作量和与服务提供商的交互减小到最低限度。</p>
+</blockquote>
+<h2 id="云计算的关键特征优势">云计算的关键特征（优势）</h2>
+<p>1.按需自助服务<br>
+2.广泛的网络接入<br>
+3.资源池化<br>
+4.快速弹性伸缩<br>
+5.可计量服务</p>
+<h2 id="计算发展史">计算发展史</h2>
+<h3 id="串行计算">串行计算</h3>
+<p><img src="https://jojoforshaun.github.io//post-images/1624782545629.png" alt="" loading="lazy"><br>
+传统上，一般的软件设计都是串行式计算，具体如下：<br>
+1.一个“problem”被划分成一串离散的“Instructions”；<br>
+2.“Instructions”会被一个一个的在单个 CPU 上执行；<br>
+3 .CPU 在在同一时间只能处理一个“Instruction”<br>
+　　一个 Problem 只采用串行计算的话，如果 Problem 太复杂，处理的时间会较长。如果解决更大规模的问题，尤其是计算机的内存受到限制的时候，用单个 CPU 来解决是不切实际或者根本不可能的，如，网络搜索引擎和网络数据库每秒要处理上百万次的处理，用串行计算基本不大可能。</p>
+<h3 id="并行计算">并行计算</h3>
+<p>难以提高单个 CPU 的计算性能，那么我们就让多个 CPU 同时参与到任务的执行中，也就是在最简单的情形下，使用并行计算来解决串行计算的限制：<br>
+<img src="https://jojoforshaun.github.io//post-images/1624782786462.png" alt="" loading="lazy"><br>
+1.先把一个大的 Problem 分解成多个可被同时解决的 Part；<br>
+2.再把每个 Part 划分成一串离散的 Instructions；<br>
+3.每个 Part 把自己的 Instructions 交给各自的 CPU 进行处理，每个 CPU 同时处理不同<br>
+Part 的 Instruction；<br>
+4.再加入一个统一控制机制对整个过程进行控制。</p>
+<h3 id="分布式计算">分布式计算</h3>
+<p>1.稀有资源可以共享。<br>
+2.通过分布式计算可以在多台计算机上平衡计算负载。<br>
+3.可以把程序放在最适合运行它的计算机上。其中，共享稀有资源和平衡负载是计算机分<br>
+布式计算的核心思想之一。<br>
+<img src="https://jojoforshaun.github.io//post-images/1624783237275.png" alt="" loading="lazy"><br>
+　　并行计算与分布式计算都是通过运用并行来获得更高性能，化大任务为小任务。简单说来，如果处理单元共享内存，就称为并行计算，反之就是分布式计算。也有人认为分布式计算是并行计算的一种特例。<br>
+　　其实分布式的任务包互相之间有独立性，上一个任务包的结果未返回或者是结果处理错误，对下一个任务包的处理几乎没有什么影响。因此，分布式的实时性要求不高，而且允许存在计算错误（因为每个计算任务给好几个参与者计算，上传结果到服务器后要比较结果，然后对结果差异大的进行验证）。</p>
+]]></content>
+    </entry>
+</feed>
