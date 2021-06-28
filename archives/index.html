@@ -9,7 +9,7 @@
 <meta name="description" content="飘啊飘~">
 <meta name="theme-color" content="#000">
 <title>星系 49-U6U</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/favicon.ico?v=1624859793990">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/favicon.ico?v=1624860336372">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/fonts/font-awesome.css">
 <link
@@ -20,9 +20,7 @@
   rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/styles/main.css">
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script src="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/js/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
@@ -287,9 +285,6 @@
       Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
         href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
     </div>
-    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-    <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
     <div class="poweredby">
       Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
     </div>
@@ -397,33 +392,33 @@
 
     drawerBox.onclick = function () {
       open = !open;
-      jQuery.Velocity(rightSideBar, 'stop');
-      jQuery.Velocity(viewport, 'stop');
-      jQuery.Velocity(rightMotions, 'stop');
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
       if (open) {
-        jQuery.Velocity(rightSideBar, {
+        window.Velocity(rightSideBar, {
           width: RIGHT_MOVE_DIS
         }, {
           duration: MOTION_TIME,
           begin: function () {
-            jQuery.Velocity(rightMotions, transitionDir, {});
+            window.Velocity(rightMotions, transitionDir, {});
           }
         })
-        jQuery.Velocity(viewport, openProp, {
+        window.Velocity(viewport, openProp, {
           duration: MOTION_TIME
         });
       } else {
-        jQuery.Velocity(rightSideBar, {
+        window.Velocity(rightSideBar, {
           width: '0px'
         }, {
           duration: MOTION_TIME,
           begin: function () {
-            jQuery.Velocity(rightMotions, {
+            window.Velocity(rightMotions, {
               opacity: 0
             });
           }
         })
-        jQuery.Velocity(viewport, closeProp, {
+        window.Velocity(viewport, closeProp, {
           duration: MOTION_TIME
         });
       }
@@ -446,7 +441,7 @@
   }
 
   let faSearch = document.querySelector('#fa_search');
-  faSearch && faSearch.addEventListener('click', function () {
+  faSearch.addEventListener('click', function () {
     document.querySelector('#search_mask').style = ''
   })
 
@@ -468,8 +463,8 @@
 
 </script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/css/jquery.fancybox.css" />
-<script src="https://cdn.jsdelivr.net/gh/JOJOforshaun/JOJOforshaun.github.io@main/media/js/jquery.fancybox.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 <script>
   let images = document.querySelectorAll('.section img');
